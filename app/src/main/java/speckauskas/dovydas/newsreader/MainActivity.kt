@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity(), IMainActivityView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         initView()
     }
 
@@ -25,6 +27,13 @@ class MainActivity : AppCompatActivity(), IMainActivityView {
         val data = DataSource.createDataSet()
         presenter.addDataSet(data)
         initRecyclerView(presenter)
+        pullToRefresh.setOnRefreshListener {
+            val data2 = DataSource.createDataSet2()
+            presenter.addDataSet(data2)
+            newsPostAdapter.notifyDataSetChanged()
+            pullToRefresh.isRefreshing = false
+            //TODO("refresh list")
+        }
     }
 
     override fun initRecyclerView(presenter: NewsPostListPresenter){

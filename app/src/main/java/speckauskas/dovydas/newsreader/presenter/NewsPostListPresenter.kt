@@ -4,18 +4,19 @@ import speckauskas.dovydas.newsreader.model.NewsPostModel
 import speckauskas.dovydas.newsreader.contract.ContractInterface.INewsPostListPresenter
 import speckauskas.dovydas.newsreader.contract.ContractInterface.INewsPostRowView
 class NewsPostListPresenter: INewsPostListPresenter {
-    private var items: List<NewsPostModel> = ArrayList()
+    private lateinit var items: List<NewsPostModel>
 
     override fun addDataSet(items_: ArrayList<NewsPostModel>){
+        items = ArrayList()
         items = items_
     }
 
-    override fun onBindRepositoryRowViewAtPosition(position: Int, rowViewI: INewsPostRowView) {
+    override fun onBindRepositoryRowViewAtPosition(position: Int, rowView: INewsPostRowView) {
         val repo = items.get(position)
-        rowViewI.setPostDate(repo.date)
-        rowViewI.setPostImage(repo.imageUrl)
-        rowViewI.setPostTitle(repo.title)
-        rowViewI.addOnClickListener(this)
+        rowView.setPostDate(repo.date)
+        rowView.setPostImage(repo.imageUrl)
+        rowView.setPostTitle(repo.title)
+        rowView.addOnClickListener(this)
     }
 
     override fun getRepositoriesRowsCount(): Int {
@@ -23,6 +24,7 @@ class NewsPostListPresenter: INewsPostListPresenter {
     }
 
     override fun onItemClickedAtPosition(adapterPosition: Int) {
+        //TODO("add news details")
         System.out.println("RecyclerView item pressed: {$adapterPosition}")
     }
 }

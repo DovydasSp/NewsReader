@@ -12,7 +12,7 @@ interface ContractInterface {
 
     interface INewsPostListPresenter {
         fun addDataSet(items_: ArrayList<NewsPostModel>)
-        fun onBindRepositoryRowViewAtPosition(position: Int, rowViewI: INewsPostRowView)
+        fun onBindRepositoryRowViewAtPosition(position: Int, rowView: INewsPostRowView)
         fun getRepositoriesRowsCount(): Int
         fun onItemClickedAtPosition(adapterPosition: Int)
     }
