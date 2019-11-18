@@ -1,6 +1,6 @@
 # NewsReader
 Simple android app for reading news.
 
-The app only has a two screens: News List, News Details.
+The app only has two screens: News List and News Details.
 
 News are parsed from https://newsapi.org/ API.
