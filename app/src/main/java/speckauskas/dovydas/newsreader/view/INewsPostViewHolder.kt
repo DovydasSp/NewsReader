@@ -8,8 +8,8 @@ import kotlinx.android.synthetic.main.layout_news_post_list_item.view.*
 import speckauskas.dovydas.newsreader.R
 import speckauskas.dovydas.newsreader.contract.ContractInterface.INewsPostRowView
 import speckauskas.dovydas.newsreader.presenter.NewsPostListPresenter
-
-
+import java.text.SimpleDateFormat
+import java.util.*
 
 class INewsPostViewHolder constructor(
     itemView: View
@@ -35,7 +35,14 @@ class INewsPostViewHolder constructor(
     }
 
     override fun setPostDate(date: String) {
-        newsPostDate.setText(date)
+        val mParsedDate: Date
+        val mOutputDateString: String
+        val mInputDateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+        val mOutputDateFormat = SimpleDateFormat("yyyy MMMM dd HH:mm", Locale.getDefault())
+        mParsedDate = mInputDateFormat.parse(date)
+        mOutputDateString = mOutputDateFormat.format(mParsedDate)
+
+        newsPostDate.setText(mOutputDateString)
     }
 
     override fun addOnClickListener(presenter: NewsPostListPresenter){

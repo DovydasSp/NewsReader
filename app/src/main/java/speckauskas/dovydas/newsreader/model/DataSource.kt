@@ -16,7 +16,8 @@ class DataSource{
                     "Write AI code once, run anywhere—it's not Java, it's Intel's oneAPI - Ars Technica",
                     formatDateFromDateString("2019-11-18T12:48:00Z"),
                     "Jim Salter",
-                    "OneAPI unifies code across multiple hardware targets—like Nvidia and Intel GPUs."
+                    "OneAPI unifies code across multiple hardware targets—like Nvidia and Intel GPUs.",
+                    ""
                 )
             )
             list.add(
@@ -25,7 +26,8 @@ class DataSource{
                     "Microsoft’s Cortana is sleeping with the fishes - Boing Boing",
                     formatDateFromDateString("2019-11-18T12:00:00Z"),
                     "",
-                    "Lots of people are fine with allowing a helpful wiretap into their lives. I am not one of them. None of them. So, when I heard that Cortana was being sent out to pasture by Microsoft, I was pretty …"
+                    "Lots of people are fine with allowing a helpful wiretap into their lives. I am not one of them. None of them. So, when I heard that Cortana was being sent out to pasture by Microsoft, I was pretty …",
+                    ""
                 )
             )
             list.add(
@@ -34,7 +36,8 @@ class DataSource{
                     "Google teases Black Friday deals: $200 off Pixel 4, $100 off Pixel 3a, up to $648 off Pixel Slate bundle - Android Police",
                     formatDateFromDateString("2019-11-18T11:55:00Z"),
                     "",
-                    "With Black Friday less than two weeks away, retailers have already started discounting some items and teasing their full-blown deal extravaganza. Google"
+                    "With Black Friday less than two weeks away, retailers have already started discounting some items and teasing their full-blown deal extravaganza. Google",
+                    ""
                 )
             )
             list.add(
@@ -43,7 +46,8 @@ class DataSource{
                     "The Morning After: Google Stadia's launch game line-up gets a big boost - Engadget",
                     formatDateFromDateString("2019-11-18T11:45:39Z"),
                     "Mat Smith",
-                    "Hey, good morning! We kick off the week with the launch of Google's much-publicized Stadia streaming game service tomorrow, with the company fleshing out the la..."
+                    "Hey, good morning! We kick off the week with the launch of Google's much-publicized Stadia streaming game service tomorrow, with the company fleshing out the la...",
+                    ""
                 )
             )
             list.add(
@@ -52,7 +56,8 @@ class DataSource{
                     "Logitech’s Adaptive Gaming Kit is a cheaper way in to accessible gaming - The Verge",
                     formatDateFromDateString("2019-11-18T11:43:46Z"),
                     "Jon Porter",
-                    "Logitech’s new Adaptive Gaming Kit is a collection of 12 buttons and triggers that are designed to work with the Xbox Adaptive Controller. The buttons plug into the controller’s 3.5mm jacks and the triggers plug in via USB."
+                    "Logitech’s new Adaptive Gaming Kit is a collection of 12 buttons and triggers that are designed to work with the Xbox Adaptive Controller. The buttons plug into the controller’s 3.5mm jacks and the triggers plug in via USB.",
+                    ""
                 )
             )
             list.add(
@@ -61,7 +66,8 @@ class DataSource{
                     "Write AI code once, run anywhere—it's not Java, it's Intel's oneAPI - Ars Technica",
                     formatDateFromDateString("2019-11-18T12:48:00Z"),
                     "Jim Salter",
-                    "OneAPI unifies code across multiple hardware targets—like Nvidia and Intel GPUs."
+                    "OneAPI unifies code across multiple hardware targets—like Nvidia and Intel GPUs.",
+                    ""
                 )
             )
             list.add(
@@ -70,7 +76,8 @@ class DataSource{
                     "Microsoft’s Cortana is sleeping with the fishes - Boing Boing",
                     formatDateFromDateString("2019-11-18T12:00:00Z"),
                     "",
-                    "Lots of people are fine with allowing a helpful wiretap into their lives. I am not one of them. None of them. So, when I heard that Cortana was being sent out to pasture by Microsoft, I was pretty …"
+                    "Lots of people are fine with allowing a helpful wiretap into their lives. I am not one of them. None of them. So, when I heard that Cortana was being sent out to pasture by Microsoft, I was pretty …",
+                    ""
                 )
             )
             list.add(
@@ -79,7 +86,8 @@ class DataSource{
                     "Google teases Black Friday deals: $200 off Pixel 4, $100 off Pixel 3a, up to $648 off Pixel Slate bundle - Android Police",
                     formatDateFromDateString("2019-11-18T11:55:00Z"),
                     "",
-                    "With Black Friday less than two weeks away, retailers have already started discounting some items and teasing their full-blown deal extravaganza. Google"
+                    "With Black Friday less than two weeks away, retailers have already started discounting some items and teasing their full-blown deal extravaganza. Google",
+                    ""
                 )
             )
             list.add(
@@ -88,7 +96,8 @@ class DataSource{
                     "The Morning After: Google Stadia's launch game line-up gets a big boost - Engadget",
                     formatDateFromDateString("2019-11-18T11:45:39Z"),
                     "Mat Smith",
-                    "Hey, good morning! We kick off the week with the launch of Google's much-publicized Stadia streaming game service tomorrow, with the company fleshing out the la..."
+                    "Hey, good morning! We kick off the week with the launch of Google's much-publicized Stadia streaming game service tomorrow, with the company fleshing out the la...",
+                    ""
                 )
             )
             list.add(
@@ -97,7 +106,8 @@ class DataSource{
                     "Logitech’s Adaptive Gaming Kit is a cheaper way in to accessible gaming - The Verge",
                     formatDateFromDateString("2019-11-18T11:43:46Z"),
                     "Jon Porter",
-                    "Logitech’s new Adaptive Gaming Kit is a collection of 12 buttons and triggers that are designed to work with the Xbox Adaptive Controller. The buttons plug into the controller’s 3.5mm jacks and the triggers plug in via USB."
+                    "Logitech’s new Adaptive Gaming Kit is a collection of 12 buttons and triggers that are designed to work with the Xbox Adaptive Controller. The buttons plug into the controller’s 3.5mm jacks and the triggers plug in via USB.",
+                    ""
                 )
             )
             return list
@@ -111,7 +121,8 @@ class DataSource{
                     "Write AI code once, run anywhere—it's not Java, it's Intel's oneAPI - Ars Technica",
                     formatDateFromDateString("2019-11-18T12:48:00Z"),
                     "Jim Salter",
-                    "OneAPI unifies code across multiple hardware targets—like Nvidia and Intel GPUs."
+                    "OneAPI unifies code across multiple hardware targets—like Nvidia and Intel GPUs.",
+                    ""
                 )
             )
             list.add(
@@ -120,7 +131,8 @@ class DataSource{
                     "Microsoft’s Cortana is sleeping with the fishes - Boing Boing",
                     formatDateFromDateString("2019-11-18T12:00:00Z"),
                     "",
-                    "Lots of people are fine with allowing a helpful wiretap into their lives. I am not one of them. None of them. So, when I heard that Cortana was being sent out to pasture by Microsoft, I was pretty …"
+                    "Lots of people are fine with allowing a helpful wiretap into their lives. I am not one of them. None of them. So, when I heard that Cortana was being sent out to pasture by Microsoft, I was pretty …",
+                    ""
                 )
             )
             return list

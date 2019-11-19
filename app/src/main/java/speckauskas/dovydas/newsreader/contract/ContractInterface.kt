@@ -8,6 +8,7 @@ interface ContractInterface {
     interface IMainActivityView {
         fun initView()
         fun initRecyclerView(presenter: NewsPostListPresenter)
+        fun refreshRecyclerView()
     }
 
     interface INewsPostListPresenter {
@@ -15,6 +16,7 @@ interface ContractInterface {
         fun onBindRepositoryRowViewAtPosition(position: Int, rowView: INewsPostRowView)
         fun getRepositoriesRowsCount(): Int
         fun onItemClickedAtPosition(adapterPosition: Int)
+        fun getData(country:String, category:String)
     }
 
     interface INewsPostRowView {
