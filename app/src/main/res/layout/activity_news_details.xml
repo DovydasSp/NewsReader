@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout_details"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:cardElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/title_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="16dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+                    <TextView
+                            android:id="@+id/description_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+                    <TextView
+                            android:id="@+id/author_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:id="@+id/date_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textAlignment="textEnd"/>
+                    <Button
+                            android:text="READ FULL ARTICLE ONLINE"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                            android:id="@+id/button_details"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_details"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleGravity="bottom"
+                app:expandedTitleMarginEnd="8dp"
+                app:expandedTitleMarginStart="8dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:title="@string/app_name"
+                app:titleEnabled="true"
+                app:expandedTitleMargin="16dp"
+                app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Display1">
+
+            <ImageView
+                    android:id="@+id/image_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@null"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"/>
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

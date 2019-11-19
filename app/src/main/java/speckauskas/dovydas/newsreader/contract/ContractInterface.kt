@@ -9,6 +9,7 @@ interface ContractInterface {
         fun initView()
         fun initRecyclerView(presenter: NewsPostListPresenter)
         fun refreshRecyclerView()
+        fun launchNewActivity(newsPost: NewsPostModel)
     }
 
     interface INewsPostListPresenter {
