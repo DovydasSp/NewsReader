@@ -7,7 +7,6 @@ import speckauskas.dovydas.newsreader.R
 import speckauskas.dovydas.newsreader.presenter.NewsPostListPresenter
 import speckauskas.dovydas.newsreader.view.INewsPostViewHolder
 
-
 class NewsPostRecyclerAdapter constructor(
     presenter_: NewsPostListPresenter
 ) : RecyclerView.Adapter<INewsPostViewHolder>(){
