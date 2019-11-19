@@ -2,6 +2,10 @@ package speckauskas.dovydas.newsreader.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 data class NewsPostModel(
     @Expose
@@ -22,9 +26,7 @@ data class NewsPostModel(
     @Expose
     @SerializedName("url")
     var url : String
-) {
-
-}
+)  : Serializable
 
 data class NewsPostsModelList(
     @Expose

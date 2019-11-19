@@ -7,6 +7,7 @@ import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.layout_news_post_list_item.view.*
 import speckauskas.dovydas.newsreader.R
 import speckauskas.dovydas.newsreader.contract.ContractInterface.INewsPostRowView
+import speckauskas.dovydas.newsreader.model.NewsPostModel
 import speckauskas.dovydas.newsreader.presenter.NewsPostListPresenter
 import java.text.SimpleDateFormat
 import java.util.*

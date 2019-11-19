@@ -1,20 +1,24 @@
-package speckauskas.dovydas.newsreader
+package speckauskas.dovydas.newsreader.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_news_post_list.*
+import speckauskas.dovydas.newsreader.R
 import speckauskas.dovydas.newsreader.model.NewsPostRecyclerAdapter
 import speckauskas.dovydas.newsreader.presenter.NewsPostListPresenter
 import speckauskas.dovydas.newsreader.contract.ContractInterface.IMainActivityView
+import speckauskas.dovydas.newsreader.model.NewsPostModel
+import java.io.Serializable
 
-class MainActivity : AppCompatActivity(), IMainActivityView {
+class NewsPostListActivity : AppCompatActivity(), IMainActivityView {
 
     private lateinit var newsPostAdapter: NewsPostRecyclerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_news_post_list)
 
         initView()
     }
@@ -30,7 +34,7 @@ class MainActivity : AppCompatActivity(), IMainActivityView {
 
     override fun initRecyclerView(presenter: NewsPostListPresenter){
         recycler_view.apply{
-            layoutManager = LinearLayoutManager(this@MainActivity)
+            layoutManager = LinearLayoutManager(this@NewsPostListActivity)
             newsPostAdapter = NewsPostRecyclerAdapter(presenter)
             adapter = newsPostAdapter
         }
@@ -40,4 +44,11 @@ class MainActivity : AppCompatActivity(), IMainActivityView {
         newsPostAdapter.notifyDataSetChanged()
         pullToRefresh.isRefreshing = false
     }
+
+    override fun launchNewActivity(newsPost: NewsPostModel) {
+        val intent = Intent(this, NewsDetailsActivity::class.java)
+        intent.putExtra("newsPost", newsPost as Serializable)
+        startActivity(intent)
+    }
+
 }

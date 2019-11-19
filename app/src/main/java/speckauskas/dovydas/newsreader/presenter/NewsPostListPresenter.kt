@@ -1,21 +1,24 @@
 package speckauskas.dovydas.newsreader.presenter
 
+import android.content.Context
+import android.content.Intent
+import androidx.core.content.ContextCompat.startActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import speckauskas.dovydas.newsreader.BuildConfig
-import speckauskas.dovydas.newsreader.MainActivity
+import speckauskas.dovydas.newsreader.view.NewsPostListActivity
 import speckauskas.dovydas.newsreader.model.*
 import speckauskas.dovydas.newsreader.contract.ContractInterface.INewsPostListPresenter
 import speckauskas.dovydas.newsreader.contract.ContractInterface.INewsPostRowView
 import speckauskas.dovydas.newsreader.model.RetrofitAPI.ApiFactory
 
 class NewsPostListPresenter constructor(
-    mainActivity_: MainActivity
+    newsPostListActivity_: NewsPostListActivity
 ): INewsPostListPresenter {
     private var items = ArrayList<NewsPostModel>()
 
-    private var mainActivity = mainActivity_
+    private var mainActivity = newsPostListActivity_
 
     override fun addDataSet(items_: ArrayList<NewsPostModel>){
         items = ArrayList()
@@ -36,8 +39,9 @@ class NewsPostListPresenter constructor(
     }
 
     override fun onItemClickedAtPosition(adapterPosition: Int) {
-        //TODO("add news details")
         System.out.println("RecyclerView item pressed: {$adapterPosition}")
+        var newsPost = items[adapterPosition]
+        mainActivity.launchNewActivity(newsPost)
     }
 
     override fun getData(country:String, category:String){
