@@ -10,7 +10,8 @@ interface ContractInterface {
         fun initRecyclerView(presenter: NewsPostListPresenter)
         fun refreshRecyclerView()
         fun launchNewActivity(newsPost: NewsPostModel)
-        fun parseData(presenter: NewsPostListPresenter, country:String, category:String)
+        fun parseData(presenter: NewsPostListPresenter)
+        fun initToolbar(presenter: NewsPostListPresenter)
     }
 
     interface INewsPostListPresenter {
