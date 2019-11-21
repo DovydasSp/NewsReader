@@ -12,7 +12,8 @@ import speckauskas.dovydas.newsreader.presenter.NewsPostListPresenter
 import java.text.SimpleDateFormat
 import java.util.*
 
-class INewsPostViewHolder constructor(
+//Populate news post layout item with data for recycler view
+class NewsPostViewHolder constructor(
     itemView: View
 ): RecyclerView.ViewHolder(itemView), INewsPostRowView{
 

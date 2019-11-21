@@ -19,12 +19,14 @@ class NewsDetailsActivity: AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_details)
 
+        //Get information about post that user wants details about
         newsPost = intent.extras.get("newsPost") as NewsPostModel
 
         initView()
     }
 
-    fun initView(){
+    private fun initView(){
+        //Populate views fields with information
         val requestOptions = RequestOptions()
             .placeholder(R.drawable.ic_launcher_background)
             .error(R.drawable.ic_launcher_background)
@@ -39,23 +41,26 @@ class NewsDetailsActivity: AppCompatActivity(){
         author_details.setText(newsPost.author)
         date_details.setText(setPostDate(newsPost.date))
 
+        //Set button press to open link to webpage
         button_details.setOnClickListener {
             val openURL = Intent(Intent.ACTION_VIEW)
             openURL.data = Uri.parse(newsPost.url)
             startActivity(openURL)
         }
 
+        //Show toolbar
         setSupportActionBar(toolbar_details)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
+    //Adds functionality to toolbar's back button
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
     }
 
-    fun setPostDate(date: String) : String {
+    //Converts date to better format
+    private fun setPostDate(date: String) : String {
         val mParsedDate: Date
         val mOutputDateString: String
         val mInputDateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())

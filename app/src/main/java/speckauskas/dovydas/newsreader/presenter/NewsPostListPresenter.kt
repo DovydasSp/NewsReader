@@ -1,8 +1,5 @@
 package speckauskas.dovydas.newsreader.presenter
 
-import android.content.Context
-import android.content.Intent
-import androidx.core.content.ContextCompat.startActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -20,7 +17,8 @@ class NewsPostListPresenter constructor(
 
     private var mainActivity = newsPostListActivity_
 
-    override fun addDataSet(items_: ArrayList<NewsPostModel>){
+    //Save parsed data set
+    override fun setData(items_: ArrayList<NewsPostModel>){
         items = ArrayList()
         items = items_
     }
@@ -44,12 +42,13 @@ class NewsPostListPresenter constructor(
         mainActivity.launchNewActivity(newsPost)
     }
 
+    //Parse data from API
     override fun getData(country:String, category:String){
         val call: Call<NewsPostsModelList> = ApiFactory.getClient.getNews(country, category, BuildConfig.API_KEY, 100)
         call.enqueue(object : Callback<NewsPostsModelList> {
 
             override fun onResponse(call: Call<NewsPostsModelList>?, response: Response<NewsPostsModelList>?) {
-                addDataSet(response!!.body()!!.results)
+                setData(response!!.body()!!.results)
                 mainActivity.refreshRecyclerView()
             }
 

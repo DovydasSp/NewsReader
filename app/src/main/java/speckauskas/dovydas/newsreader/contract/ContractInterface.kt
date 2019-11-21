@@ -10,10 +10,11 @@ interface ContractInterface {
         fun initRecyclerView(presenter: NewsPostListPresenter)
         fun refreshRecyclerView()
         fun launchNewActivity(newsPost: NewsPostModel)
+        fun parseData(presenter: NewsPostListPresenter, country:String, category:String)
     }
 
     interface INewsPostListPresenter {
-        fun addDataSet(items_: ArrayList<NewsPostModel>)
+        fun setData(items_: ArrayList<NewsPostModel>)
         fun onBindRepositoryRowViewAtPosition(position: Int, rowView: INewsPostRowView)
         fun getRepositoriesRowsCount(): Int
         fun onItemClickedAtPosition(adapterPosition: Int)
