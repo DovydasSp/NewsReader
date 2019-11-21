@@ -25,7 +25,7 @@ class NewsPostListPresenter constructor(
 
     override fun onBindRepositoryRowViewAtPosition(position: Int, rowView: INewsPostRowView) {
         val repo = items.get(position)
-        rowView.setPostDate(repo.date)
+        rowView.setPostDate(repo.changedDate())
         if(!repo.imageUrl.isNullOrEmpty())
             rowView.setPostImage(repo.imageUrl)
         rowView.setPostTitle(repo.title)
@@ -37,7 +37,6 @@ class NewsPostListPresenter constructor(
     }
 
     override fun onItemClickedAtPosition(adapterPosition: Int) {
-        System.out.println("RecyclerView item pressed: {$adapterPosition}")
         var newsPost = items[adapterPosition]
         mainActivity.launchNewActivity(newsPost)
     }

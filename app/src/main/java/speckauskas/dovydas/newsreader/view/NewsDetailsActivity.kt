@@ -9,8 +9,6 @@ import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.activity_news_details.*
 import speckauskas.dovydas.newsreader.R
 import speckauskas.dovydas.newsreader.model.NewsPostModel
-import java.text.SimpleDateFormat
-import java.util.*
 
 class NewsDetailsActivity: AppCompatActivity(){
     private lateinit var newsPost:NewsPostModel
@@ -39,7 +37,7 @@ class NewsDetailsActivity: AppCompatActivity(){
         title_details.setText(newsPost.title)
         description_details.setText(newsPost.description)
         author_details.setText(newsPost.author)
-        date_details.setText(setPostDate(newsPost.date))
+        date_details.setText(newsPost.changedDate())
 
         //Set button press to open link to webpage
         button_details.setOnClickListener {
@@ -57,17 +55,5 @@ class NewsDetailsActivity: AppCompatActivity(){
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
-    }
-
-    //Converts date to better format
-    private fun setPostDate(date: String) : String {
-        val mParsedDate: Date
-        val mOutputDateString: String
-        val mInputDateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
-        val mOutputDateFormat = SimpleDateFormat("yyyy MMMM dd HH:mm", Locale.getDefault())
-        mParsedDate = mInputDateFormat.parse(date)
-        mOutputDateString = mOutputDateFormat.format(mParsedDate)
-
-        return mOutputDateString
     }
 }

@@ -3,6 +3,8 @@ package speckauskas.dovydas.newsreader.model
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
+import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.collections.ArrayList
 
 data class NewsPostModel(
@@ -24,7 +26,19 @@ data class NewsPostModel(
     @Expose
     @SerializedName("url")
     var url : String
-)  : Serializable
+)  : Serializable{
+    fun changedDate():String{
+        val mParsedDate: Date
+        val mOutputDateString: String
+        val mInputDateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+        val mOutputDateFormat = SimpleDateFormat("yyyy MMMM dd HH:mm", Locale.getDefault())
+        mParsedDate = mInputDateFormat.parse(date)
+        mOutputDateString = mOutputDateFormat.format(mParsedDate)
+
+        return mOutputDateString
+    }
+
+}
 
 data class NewsPostsModelList(
     @Expose
